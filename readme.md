@@ -41,6 +41,7 @@ This repository contains code for an image search system based on co-occurrence 
 - `uploads`: Temporary folder for storing uploaded images.
 - `most_similar`: Folder containing the most similar images found during searches.
 
+.
 ├── app.py
 ├── app__ssim.py
 ├── cooccurrence
