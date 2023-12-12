@@ -43,7 +43,6 @@ This repository contains code for an image search system based on co-occurrence 
 .
 ```
 ├── app.py
-├── app__ssim.py
 ├── cooccurrence
 │   ├── cooccurrences.py
 │   └── __pycache__
@@ -64,13 +63,9 @@ This repository contains code for an image search system based on co-occurrence 
 │   ├── re.cpython-310.pyc
 │   └── re.cpython-36.pyc
 ├── README.md
-├── resize.py
-├── static
 ├── templates
 │   └── index.html
 └── upload
-    ├── 20066.jpg
-    ├── 24317.jpg
     └── 24319.jpg
 ```
 ### Additional Notes
