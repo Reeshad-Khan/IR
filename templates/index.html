@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4285f4; /* Google blue color */
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            background-color: #4285f4; /* Google blue color */
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #4285f4; /* Google blue color */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #4285f4; /* Google blue color */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .back-button button {
+            background-color: #4285f4; /* Google blue color */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Search</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose an image</label>
+        <input type="file" name="file" id="file" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if uploaded_image %}
+        <h2>Uploaded Image</h2>
+        <img src="{{ url_for('serve_uploaded_image', filename=os.path.basename(uploaded_image)) }}" alt="Uploaded Image">
+    {% endif %}
+
+    {% if most_similar_image %}
+        <h2>Most Similar Image</h2>
+        <img src="{{ url_for('serve_most_similar_image', filename=os.path.basename(most_similar_image)) }}" alt="Most Similar Image">
+    {% endif %}
+
+    {% if uploaded_image or most_similar_image %}
+        <div class="back-button">
+            <button onclick="window.location.href='/'">Back to Image Search</button>
+        </div>
+    {% endif %}
+</body>
+</html>
