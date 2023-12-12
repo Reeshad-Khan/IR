@@ -41,7 +41,7 @@ This repository contains code for an image search system based on co-occurrence 
 - `uploads`: Temporary folder for storing uploaded images.
 - `most_similar`: Folder containing the most similar images found during searches.
 .
-.
+```
 ├── app.py
 ├── app__ssim.py
 ├── cooccurrence
@@ -72,7 +72,7 @@ This repository contains code for an image search system based on co-occurrence 
     ├── 20066.jpg
     ├── 24317.jpg
     └── 24319.jpg
-
+```
 ### Additional Notes
 - The system is based on perceptual similarity using SSIM and may not perform well with highly stylized or abstract images.
 - Ensure a stable internet connection for the initial loading of the VGG16 model.
