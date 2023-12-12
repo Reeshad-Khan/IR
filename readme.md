@@ -40,36 +40,37 @@ This repository contains code for an image search system based on co-occurrence 
 ### Folder Structure
 - `uploads`: Temporary folder for storing uploaded images.
 - `most_similar`: Folder containing the most similar images found during searches.
-- app.py
-- app__ssim.py
-- cooccurrence
-  - cooccurrences.py
-  - __pycache__
-    - cooccurrences.cpython-36.pyc
-- cooc_example.py
-- data
-  - all_souls_000117.jpg
-  - data
-  - networks
-    - imagenet-caffe-vgg16-features-d369c8e.pth
-  - weights_cooc_44_best_model_8192_ft.npy
-- figures
-  - cooc_example_image.png
-  - deep_cooc.png
-  - Samples.png
-- LICENSE
-- __pycache__
-  - re.cpython-310.pyc
-  - re.cpython-36.pyc
-- README.md
-- resize.py
-- static
-- templates
-  - index.html
-- upload
-  - 20066.jpg
-  - 24317.jpg
-  - 24319.jpg
+.
+├── app.py
+├── app__ssim.py
+├── cooccurrence
+│   ├── cooccurrences.py
+│   └── __pycache__
+│       └── cooccurrences.cpython-36.pyc
+├── cooc_example.py
+├── data
+│   ├── all_souls_000117.jpg
+│   ├── data
+│   ├── networks
+│   │   └── imagenet-caffe-vgg16-features-d369c8e.pth
+│   └── weights_cooc_44_best_model_8192_ft.npy
+├── figures
+│   ├── cooc_example_image.png
+│   ├── deep_cooc.png
+│   └── Samples.png
+├── LICENSE
+├── __pycache__
+│   ├── re.cpython-310.pyc
+│   └── re.cpython-36.pyc
+├── README.md
+├── resize.py
+├── static
+├── templates
+│   └── index.html
+└── upload
+    ├── 20066.jpg
+    ├── 24317.jpg
+    └── 24319.jpg
 
 ### Additional Notes
 - The system is based on perceptual similarity using SSIM and may not perform well with highly stylized or abstract images.
